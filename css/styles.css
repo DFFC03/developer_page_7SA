@@ -1,7 +1,19 @@
+:root{
+    --blanco: #ffffff;
+    --osucro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    font-family: Krub, Helvetica, sans-serif;
+
+}
 html{
+    /*Convercion para rem */
     font-size: 62.5%;
+    font: Krub;
 }
 body{
+    /* 16 px es eñ estandar para navegadores */
     font-size: 16px;
 }
 
@@ -13,4 +25,50 @@ body{
 
 .titulo span{
     font-size: 2rem;
+}
+
+.contenedor{
+    max-width: 120rem;
+    /*  margin-top: 0;
+        margint-right: auto;
+        margin-bottom: 0;
+        margin-left: auto,
+    */
+    margin: 0 auto;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal a{
+    /*background-color: var(--blanco);*/
+    /*Quirar subrayado*/
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--blanco);
+}
+.navegacion-principal{
+    /*padding: 1rem;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content para filas y 
+    align items para columndas*/
+    /*justify-content: space-between;*/
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Si al menos tiene 768px (tablet) */
+@media (min-width: 768px ) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--osucro);
 }
