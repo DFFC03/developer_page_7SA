@@ -72,3 +72,9 @@ body{
     background-color: var(--primario);
     color: var(--osucro);
 }
+.hero{
+    background-image: url("../img/hero.jpg");
+    background-repeat: no-repeat;
+    /*Cover cubre la imagen con todoel tamaño posible*/
+    background-size: cover;
+}
