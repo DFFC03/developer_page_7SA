@@ -7,11 +7,33 @@
     font-family: Krub, Helvetica, sans-serif;
 
 }
+
 html{
     /*Convercion para rem */
     font-size: 62.5%;
     font: Krub;
+    /* Ajuste para modelo de caja */
+    box-sizing: border-box;
 }
+
+*, *::before, *::after{
+    /* Ajuste para modelo de caja */
+    box-sizing: inherit;
+}
+ /*Tipografia Titulos*/
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+
 body{
     /* 16 px es eñ estandar para navegadores */
     font-size: 16px;
@@ -77,4 +99,63 @@ body{
     background-repeat: no-repeat;
     /*Cover cubre la imagen con todoel tamaño posible*/
     background-size: cover;
+    height: 450px; /*Altura de la imagen hero*/
+    position: relative; /* Sirve para maipular la posicion,
+    El padre siempre debe ser relative */
+}
+
+.contenido-hero{
+/* Sirve para maipular la posicion, 
+El hijo siempre debe ser absoluto*/
+    position: absolute;
+    background-color: rgba(0,0,0,.7); /* Al 70%*/ 
+    width: 100%;
+    height: 100%;
+    /* Alinear vertical y horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero p, 
+.contenido-hero h2{
+    color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+.boton{
+    /*Color del fondo del boton*/
+    background-color: var(--secundario);
+    /*Color del texto*/
+    color: var(--blanco);
+    /*Espacio interior al boton, el primer valor es top-bottom 
+    y el segundo es right-left */
+    padding: 1rem 3rem;
+    /* Poner margin solo arriba*/
+    margin-top: 3rem;
+    /*Tamaño de letra*/
+    font-size: 2rem;
+    /*Quitar subrayado*/
+    text-decoration: none;
+    /*Convertir en Mayuscula*/
+    text-transform: uppercase;
+    /*Texto en negritas*/
+    font-weight: bold;
+    /*Poner bordes redondeado*/
+    border-radius: 1rem;
+    /*Ancho del boton al 90% para diseño movil*/
+    width: 90%;
+    /*Alinear texto del boton */
+    text-align: center;
+}
+
+@media (min-width: 768px ) {
+    .boton{
+        width: auto;
+    }
 }
