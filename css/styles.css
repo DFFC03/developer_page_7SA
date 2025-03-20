@@ -159,3 +159,42 @@ El hijo siempre debe ser absoluto*/
         width: auto;
     }
 }
+
+/*Mis servicios*/
+@media (min-width: 768px ) {
+    .servicios{
+        display: grid;
+        /*Define el area de las columnas*/
+        /*grid-template-columns: 1fr 1fr 1fr*/
+        /*grid-template-columns: 33.3% 33.3% 33.3% */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p{
+    /*Interlineado*/ 
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 100px;
+    display: flex;
+    /*Espacio uniforme */
+    align-items: center;
+    justify-content: space-evenly;
+}
