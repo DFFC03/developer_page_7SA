@@ -65,41 +65,43 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi harum quidem suscipit? Numquam quas obcaecati, delectus cumque dolorem veritatis in earum unde ut, quisquam at labore cupiditate nisi! Pariatur, earum.</p>
             </section>
         </div> <!--Cierrer de servicios-->
-    </main>
+
     <section>
         <h2>Contacto</h2>
-        <form>
+        <form class="formulario">
             <fieldset>
                 <legend>Llena tus datos para establecer contacto</legend>
-                <div>
-                    <label>Nombre</label>
-                    <input type="text" placeholder="Tu nombre">
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Tu nombre">
+                    </div>
+
+                    <div class="campo">
+                        <label>Teléfono</label>
+                        <input type="tel" placeholder="Tu teléfono">
+                    </div>
+
+                    <div class="campo">
+                        <label>Correo</label>
+                        <input type="email" placeholder="Tu correo">
+                    </div>
+
+                    <div class="campo">
+                        <label>Mensaje</label>
+                        <textarea></textarea>
+                    </div>
+                </div><!--Cierre div.contenedor-campos-->
+                <div class="alinear-derecha flex">
+                    <input class="boton w-sm-100" type="submit" value="Enviar">
                 </div>
 
-                <div>
-                    <label>Teléfono</label>
-                    <input type="tel" placeholder="Tu teléfono">
-                </div>
-
-                <div>
-                    <label>Correo</label>
-                    <input type="email" placeholder="Tu correo">
-                </div>
-
-                <div>
-                    <label>Mensaje</label>
-                    <textarea></textarea>
-                </div>
-
-                <div>
-                    <input type="submit" value="Enviar">
-                </div>
             </fieldset>
 
         </form>
     </section>
-
-    <footer>
+    </main>
+    <footer class="footer">
         <p>Todos los derechos reservados 2025 © Diego Felipe Ferrer Chacon</p>
     </footer>
 

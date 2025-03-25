@@ -152,12 +152,18 @@ El hijo siempre debe ser absoluto*/
     width: 90%;
     /*Alinear texto del boton */
     text-align: center;
+    /*Quitar el borde*/
+    border: none;
 }
 
 @media (min-width: 768px ) {
     .boton{
         width: auto;
     }
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 /*Mis servicios*/
@@ -197,4 +203,92 @@ El hijo siempre debe ser absoluto*/
     /*Espacio uniforme */
     align-items: center;
     justify-content: space-evenly;
+}
+
+/* Contacto */
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%); /* Ahorra media Query*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--primario);
+}
+
+.contenedor-campos{
+
+}
+
+.campo{
+    margin-bottom: 1rem;
+
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    /* Tomara el espacio disponible*/ 
+    display: block;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.campo textarea{
+    height: 20rem;
+}
+
+/*Utilidades*/
+.w-sm-100{
+    width: 100%;
+}
+
+@media (min-width: 768px ) {
+    .w-sm-100{
+        width: auto;
+    }
+}
+
+.flex{
+    display: flex;
+}
+
+.alinear-derecha{
+    justify-content: flex-end;
+}
+
+/*Acomodar Campos*/
+@media (min-width: 768px ) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        /*Darle espacio a cada fila*/
+        grid-template-rows: auto auto 20rem;
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+       grid-column: 1/3;
+    }
+}
+
+.footer{
+    text-align: center;
 }
